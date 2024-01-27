@@ -46,3 +46,21 @@ export const LANGUAGES_LIST: NestedLanguagesList = {
     TW: "中文",
   },
 };
+
+export const TOP_MESSAGE: NestedLanguagesList = {
+  first: {
+    EN: "Hi!",
+    JA: "初めまして",
+    TW: "Hi!",
+  },
+  second: {
+    EN: "I'm Aubrey Lin",
+    JA: "リンと申します",
+    TW: "我是林怡萱",
+  },
+  third: {
+    EN: "FrontEnd Engineer",
+    JA: "フロントエンドエンジニア",
+    TW: " 前端工程師",
+  },
+};

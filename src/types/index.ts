@@ -5,5 +5,5 @@ export type LanguagesList = {
 };
 
 export type NestedLanguagesList = {
-  [key in Languages]: { [key in Languages]: string };
+  [key: string]: { [key in Languages]: string };
 };
