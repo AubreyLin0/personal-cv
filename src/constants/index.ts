@@ -1,4 +1,4 @@
-import { LanguagesList } from "../types";
+import { Languages, LanguagesList, NestedLanguagesList } from "../types";
 
 export const LINKS: LanguagesList[] = [
   {
@@ -21,15 +21,28 @@ export const LINKS: LanguagesList[] = [
     JA: "連絡先",
     TW: "聯絡我",
   },
-  //   {
-  //     EN: "Language",
-  //     JA: "言語",
-  //     TW: "語言",
-  //   },
 ];
 
-export const LANGUAGES_LIST: LanguagesList = {
-  EN: ["EN", "JA", "TW"],
-  JA: ["英語", "日本語", "繁体字"],
-  TW: ["英文", "日文", "中文"],
+export const MENU_TITLE = {
+  EN: "Language",
+  JA: "言語",
+  TW: "語言",
+};
+
+export const LANGUAGES_LIST: NestedLanguagesList = {
+  EN: {
+    EN: "EN",
+    JA: "JA",
+    TW: "TW",
+  },
+  JA: {
+    EN: "英語",
+    JA: "日本語",
+    TW: "繁体字",
+  },
+  TW: {
+    EN: "英文",
+    JA: "日文",
+    TW: "中文",
+  },
 };
