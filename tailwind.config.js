@@ -11,8 +11,9 @@ export default {
       colors: {
         "base-black": "#505050",
         "base-white": "#f4f6f8",
-        "main-yellow": "#f6e05e",
+        "base-yellow": "#f6e05e",
         "dark-blue": "#041c32",
+        "dark-yellow": "#F6D776",
       },
       backgroundImage: {
         wave: "url('src/assets/wave-bg.svg')",
