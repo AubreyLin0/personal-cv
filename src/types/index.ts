@@ -1,5 +1,3 @@
 export type Languages = {
-  en: string;
-  ja: string;
-  tw: string;
+  [key in "en" | "ja" | "tw"]: string | string[];
 };

@@ -21,9 +21,15 @@ export const LINKS: Languages[] = [
     ja: "連絡先",
     tw: "聯絡我",
   },
-  {
-    en: "Language",
-    ja: "言語",
-    tw: "語言",
-  },
+  //   {
+  //     en: "Language",
+  //     ja: "言語",
+  //     tw: "語言",
+  //   },
 ];
+
+export const LANGUAGES_LIST: Languages = {
+  en: ["EN", "JA", "TW"],
+  ja: ["英語", "日本語", "繁体字"],
+  tw: ["英文", "日文", "中文"],
+};
