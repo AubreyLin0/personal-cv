@@ -1,3 +1,5 @@
-export type Languages = {
-  [key in "en" | "ja" | "tw"]: string | string[];
+export type Languages = "EN" | "JA" | "TW";
+
+export type LanguagesList = {
+  [key in Languages]: string | string[];
 };

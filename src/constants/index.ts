@@ -1,35 +1,35 @@
-import { Languages } from "../types";
+import { LanguagesList } from "../types";
 
-export const LINKS: Languages[] = [
+export const LINKS: LanguagesList[] = [
   {
-    en: "About",
-    ja: "自己紹介",
-    tw: "關於我",
+    EN: "About",
+    JA: "自己紹介",
+    TW: "關於我",
   },
   {
-    en: "Skills",
-    ja: "スキル",
-    tw: "技能",
+    EN: "Skills",
+    JA: "スキル",
+    TW: "技能",
   },
   {
-    en: "Portfolio",
-    ja: "ポートフォリオ",
-    tw: "作品集",
+    EN: "Portfolio",
+    JA: "ポートフォリオ",
+    TW: "作品集",
   },
   {
-    en: "Contact",
-    ja: "連絡先",
-    tw: "聯絡我",
+    EN: "Contact",
+    JA: "連絡先",
+    TW: "聯絡我",
   },
   //   {
-  //     en: "Language",
-  //     ja: "言語",
-  //     tw: "語言",
+  //     EN: "Language",
+  //     JA: "言語",
+  //     TW: "語言",
   //   },
 ];
 
-export const LANGUAGES_LIST: Languages = {
-  en: ["EN", "JA", "TW"],
-  ja: ["英語", "日本語", "繁体字"],
-  tw: ["英文", "日文", "中文"],
+export const LANGUAGES_LIST: LanguagesList = {
+  EN: ["EN", "JA", "TW"],
+  JA: ["英語", "日本語", "繁体字"],
+  TW: ["英文", "日文", "中文"],
 };

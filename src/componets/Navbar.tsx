@@ -40,7 +40,7 @@ const Navbar = () => {
               key={index}
               sx={{ borderRadius: "5px", margin: "0 8px" }}
             >
-              {link.en}
+              {link.EN}
             </ListItemButton>
           );
         })}
