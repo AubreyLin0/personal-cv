@@ -1,22 +1,33 @@
-import React from "react";
+import { List, ListItemButton } from "@mui/material";
+import { LINKS } from "../constants";
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <nav className="px-5 py-3">
+    <nav className="px-5 py-3 flex justify-between">
       <button
         className="text-dark-blue font-mercado font-extrabold text-5xl"
-        //Scroll to the top of the page
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }}
+        onClick={scrollToTop}
       >
         Resume
       </button>
-
-      {/* <NavLinks setLocal={props.setLocal} /> */}
+      <List sx={{ display: "flex" }}>
+        {LINKS.map((link) => {
+          return (
+            <ListItemButton
+              key={link.en}
+              sx={{ borderRadius: "5px", margin: "0 8px" }}
+            >
+              {link.en}
+            </ListItemButton>
+          );
+        })}
+      </List>
     </nav>
   );
 };
