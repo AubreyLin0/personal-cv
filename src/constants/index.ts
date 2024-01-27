@@ -54,13 +54,13 @@ export const TOP_MESSAGE: NestedLanguagesList = {
     TW: "Hi!",
   },
   second: {
-    EN: "I'm Aubrey Lin",
+    EN: "I'm Aubrey",
     JA: "リンと申します",
     TW: "我是林怡萱",
   },
   third: {
-    EN: "FrontEnd Engineer",
+    EN: "A FrontEnd Engineer",
     JA: "フロントエンドエンジニア",
-    TW: " 前端工程師",
+    TW: "前端工程師",
   },
 };
