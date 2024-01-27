@@ -64,3 +64,44 @@ export const TOP_MESSAGE: NestedLanguagesList = {
     TW: "前端工程師",
   },
 };
+
+export const INTRODUCE_MESSAGE: NestedLanguagesList = {
+  title: {
+    EN: "Hello! I'm Aubrey",
+    JA: "初めまして",
+    TW: "Hi!",
+  },
+  content: {
+    EN: `Born in Taiwan. After leading the former company's new official website design team, my interest in web design grew, leading me to embark on self-study in web development in 2021.\n\nIn 2022, I joined Aiful as a Front-end Engineer, specializing in React, TypeScript, and Next.js. I am actively involved in the development of an in-house customer management system, taking charge of screen construction, implementing unit tests, and participating in team code reviews.`,
+    JA: "台湾生まれ。前職で公式サイトリニューアルチームを担当させていただいた後、ウェブの開発に興味を持ち、2021年からWeb開発を学び始めました。\n2022年にフロントエンドエンジニアとしてアイフルに入社しました。React、TypeScript、Next.jsで社内顧客管理システムの開発に携わり、画面構築や単体テストの実施、チームのコードレビューなどを担当しています。",
+    TW: "台灣屏東人。在帶領前公司的官網設計團隊後，開始對網頁設計產生興趣，並在2021年開始自學網頁開發。\n2022年，我加入Aiful擔任前端工程師，主要利用React, TypeScript和Next.js等技術開發。負責內部客戶管理系統的開發、實施單元測試並參與Code review。",
+  },
+};
+
+export const INTRODUCE_TABLE: NestedLanguagesList = {
+  age: {
+    EN: "Age",
+    JA: "年齢",
+    TW: "年齡",
+  },
+  tel: {
+    EN: "Phone",
+    JA: "電話番号",
+    TW: "聯絡電話",
+  },
+  address: {
+    EN: "Address",
+    JA: "住所",
+    TW: "居住地",
+  },
+  addressContent: {
+    EN: "Osaka, Japan",
+    JA: "大阪",
+    TW: "大阪",
+  },
+  certification: {
+    EN: "Certification",
+    JA: "資格",
+    TW: "證書",
+  },
+};

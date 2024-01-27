@@ -1,5 +1,5 @@
-type TextSize = "normal" | "medium" | "large";
-type SizeClassName = "text-xl" | "text-4xl" | "text-6xl";
+type TextSize = "small" | "normal" | "medium" | "large";
+type SizeClassName = "text-base" | "text-xl" | "text-4xl" | "text-6xl";
 
 export type Props = {
   text: string;
@@ -8,6 +8,7 @@ export type Props = {
 };
 
 const SIZE_LIST = new Map<TextSize, SizeClassName>([
+  ["small", "text-base"],
   ["normal", "text-xl"],
   ["medium", "text-4xl"],
   ["large", "text-6xl"],

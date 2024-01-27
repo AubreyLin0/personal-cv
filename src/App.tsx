@@ -1,3 +1,4 @@
+import Introduce from "./componets/Introduce";
 import Navbar from "./componets/Navbar";
 import TopArea from "./componets/TopArea";
 import { useChangeLanguage } from "./hooks/useChangeLanguage";
@@ -10,6 +11,7 @@ function App() {
       <main className="font-ubuntu h-full">
         <Navbar />
         <TopArea />
+        <Introduce />
       </main>
     </ContentLanguage.Provider>
   );
