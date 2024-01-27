@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { TOP_MESSAGE } from "../constants";
 import ContentLanguage from "../store";
 import Text from "../elements/Text";
@@ -10,16 +10,16 @@ import RoundedButton from "../elements/button/RoundedButton";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const TEXT_POSITION: LanguagesList = {
-  EN: "left-[calc(28%-10px)] bottom-[calc(-27%+5px)]",
+  EN: "left-[calc(38%-10px)] bottom-[calc(-27%+5px)]",
   JA: "left-[calc(3%-10px)] bottom-[calc(-27%+5px)]",
-  TW: "left-[calc(30%-10px)] bottom-[calc(-27%+5px)]",
+  TW: "left-[calc(40%-10px)] bottom-[calc(-27%+5px)]",
 };
 
 const TopArea = () => {
   const { language } = useContext(ContentLanguage);
   return (
-    <div>
-      <div className="bg-base-white flex px-2 py-20">
+    <Fragment>
+      <div className="bg-base-white flex items-center px-24 py-28">
         <img
           src="src/assets/top-image.svg"
           alt="top-image"
@@ -35,7 +35,6 @@ const TopArea = () => {
               className={`w-32 absolute ${TEXT_POSITION[language]}`}
             />
           </div>
-
           <Text text={TOP_MESSAGE["third"][language]} size="medium" />
           <Link
             href="https://github.com/AubreyLin0"
@@ -50,8 +49,8 @@ const TopArea = () => {
           />
         </div>
       </div>
-      <div className="bg-wave block h-[200px] w-full"></div>;
-    </div>
+      <div className="bg-wave block h-[200px] w-full" />
+    </Fragment>
   );
 };
 
