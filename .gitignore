@@ -10,7 +10,7 @@
 /build
 
 #image
-public/images/picture.JPEG
+src/assets/introduce-image.jpg
 
 # misc
 .DS_Store

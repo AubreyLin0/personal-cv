@@ -68,8 +68,8 @@ export const TOP_MESSAGE: NestedLanguagesList = {
 export const INTRODUCE_MESSAGE: NestedLanguagesList = {
   title: {
     EN: "Hello! I'm Aubrey",
-    JA: "初めまして",
-    TW: "Hi!",
+    JA: "こんにちは、リンです",
+    TW: "您好，我是林怡萱",
   },
   content: {
     EN: `Born in Taiwan. After leading the former company's new official website design team, my interest in web design grew, leading me to embark on self-study in web development in 2021.\n\nIn 2022, I joined Aiful as a Front-end Engineer, specializing in React, TypeScript, and Next.js. I am actively involved in the development of an in-house customer management system, taking charge of screen construction, implementing unit tests, and participating in team code reviews.`,

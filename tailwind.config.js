@@ -17,6 +17,7 @@ export default {
       },
       backgroundImage: {
         wave: "url('src/assets/wave-bg.svg')",
+        introduce: "url('src/assets/introduce-image.jpg')",
       },
     },
   },
