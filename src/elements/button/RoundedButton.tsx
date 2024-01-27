@@ -17,7 +17,7 @@ const RoundedButton = ({
     <button
       type={type}
       onClick={onClick}
-      className="bg-base-yellow text-dark-blue rounded-full mt-8 py-3 w-52 text-xl transition ease-in-out duration-300 hover:translate-x-[14px] hover:bg-dark-yellow"
+      className="bg-base-yellow text-dark-blue rounded-full py-3 w-52 text-xl transition ease-in-out duration-300 hover:translate-x-[14px] hover:bg-dark-yellow"
     >
       {text}
       {icon}
