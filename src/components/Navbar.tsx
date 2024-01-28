@@ -59,7 +59,20 @@ const Navbar = () => {
             className="ml-4 text-base-black"
           />
         </ListItemButton>
-        <Menu anchorEl={anchorEl} open={isOpen} onClose={handleClose}>
+        <Menu
+          anchorEl={anchorEl}
+          open={isOpen}
+          onClose={handleClose}
+          disableScrollLock
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
           {Object.entries(LANGUAGES_LIST).map(([languageKey, list]) => {
             if (language === languageKey) {
               return Object.entries(list).map(([key, text]) => {
