@@ -17,7 +17,6 @@ import emailjs from "@emailjs/browser";
 import Input from "../elements/Input";
 import Snackbar from "../elements/Snackbar";
 import ErrorMessage from "../elements/ErrorMessage";
-import CircularProgress from "@mui/material/CircularProgress";
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
