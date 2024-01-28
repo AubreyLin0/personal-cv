@@ -1,3 +1,4 @@
+import ContactForm from "./componets/ContactForm";
 import Introduce from "./componets/Introduce";
 import Navbar from "./componets/Navbar";
 import Portfolio from "./componets/Portfolio";
@@ -16,6 +17,7 @@ function App() {
         <Introduce />
         <Skills />
         <Portfolio />
+        <ContactForm />
       </main>
     </ContentLanguage.Provider>
   );

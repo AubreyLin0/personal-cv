@@ -111,3 +111,62 @@ export const SKILL_SUBTITLE = {
   JA: "勉強熱心で、Web開発に必要なスキルを持っています",
   TW: "我熱衷於學習新技術，並擁有網頁開發所需的技能",
 };
+
+export const FORM_LABELS: NestedLanguagesList = {
+  name: {
+    EN: "Name",
+    JA: "お名前",
+    TW: "姓名",
+  },
+  email: {
+    EN: "Email",
+    JA: "メールアドレス",
+    TW: "Email",
+  },
+  title: {
+    EN: "Title",
+    JA: "件名",
+    TW: "標題",
+  },
+  content: {
+    EN: "Message",
+    JA: "本文",
+    TW: "內文",
+  },
+};
+
+export const ERROR_MESSAGES: NestedLanguagesList = {
+  required: {
+    EN: "Please fill out this field",
+    JA: "必須項目です",
+    TW: "必須欄位",
+  },
+  email: {
+    EN: "Email",
+    JA: "メールアドレス",
+    TW: "Email",
+  },
+  title: {
+    EN: "Title",
+    JA: "件名",
+    TW: "標題",
+  },
+  content: {
+    EN: "Message",
+    JA: "本文",
+    TW: "內文",
+  },
+};
+
+export const CONTACT_TEXT: NestedLanguagesList = {
+  title: {
+    EN: "Let's have a talk!",
+    JA: "お気軽にお問い合わせください",
+    TW: "讓我們聊聊吧！",
+  },
+  content: {
+    EN: "If you enjoy my work or have any other questions, please feel free to reach out to me using the contact form. \nI'll respond as promptly as possible. \n\nLooking forward to hearing from you!",
+    JA: "作品に興味を持っていただけたり、その他質問があれば、お気軽にお問い合わせフォームからご連絡ください。\nありがとうございます。",
+    TW: `如果對我的作品有興趣，或者有其他疑問的話，歡迎寄信給我。\n收到信後我會盡快回覆您，謝謝。`,
+  },
+};

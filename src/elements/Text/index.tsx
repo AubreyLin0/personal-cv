@@ -18,7 +18,7 @@ const SIZE_LIST = new Map<Size, SizeClassName>([
 const Text = ({ size, text, extraStyle = "" }: Props) => {
   const textSize = SIZE_LIST.get(size) ?? "";
   return (
-    <h3 className={`text-dark-blue  my-2 ${textSize} ${extraStyle}`}>{text}</h3>
+    <h3 className={`text-dark-blue my-2 ${textSize} ${extraStyle}`}>{text}</h3>
   );
 };
 

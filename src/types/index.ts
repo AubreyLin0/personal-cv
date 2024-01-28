@@ -11,3 +11,10 @@ export type NestedLanguagesList = {
 };
 
 export type SizeList = { [key in Size]: String };
+
+export type ContactFormValue = {
+  name: string;
+  email: string;
+  title: string;
+  content: string;
+};

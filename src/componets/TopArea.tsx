@@ -43,6 +43,7 @@ const TopArea = () => {
             onClick={() => {}}
             icon={<FontAwesomeIcon icon={faArrowRight} className="ml-2" />}
             text="Get In Touch"
+            showAnimation
           />
         </div>
       </div>
