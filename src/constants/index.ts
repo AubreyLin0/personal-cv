@@ -173,3 +173,10 @@ export const ALERT_MESSAGES: NestedLanguagesList = {
     TW: "送信失敗。麻煩請用其他聯絡方式聯絡我。",
   },
 };
+
+export const FORM_DEFAULT_VALUE = {
+  name: "",
+  email: "",
+  title: "",
+  content: "",
+};
