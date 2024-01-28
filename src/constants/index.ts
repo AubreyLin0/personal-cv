@@ -1,4 +1,4 @@
-import { Languages, LanguagesList, NestedLanguagesList } from "../types";
+import { LanguagesList, NestedLanguagesList } from "../types";
 
 export const LINKS: LanguagesList[] = [
   {
@@ -23,7 +23,7 @@ export const LINKS: LanguagesList[] = [
   },
 ];
 
-export const MENU_TITLE = {
+export const MENU_TITLE: LanguagesList = {
   EN: "Language",
   JA: "言語",
   TW: "語言",
@@ -104,4 +104,10 @@ export const INTRODUCE_TABLE: NestedLanguagesList = {
     JA: "資格",
     TW: "證書",
   },
+};
+
+export const SKILL_SUBTITLE = {
+  EN: "I am a quick learner and specialize in a multitude of skills required for web application development.",
+  JA: "勉強熱心で、Web開発に必要なスキルを持っています",
+  TW: "我熱衷於學習新技術，並擁有網頁開發所需的技能",
 };

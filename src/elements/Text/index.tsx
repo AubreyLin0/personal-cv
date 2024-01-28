@@ -1,13 +1,14 @@
-type TextSize = "small" | "normal" | "medium" | "large";
+import { Size } from "../../types";
+
 type SizeClassName = "text-base" | "text-xl" | "text-4xl" | "text-6xl";
 
 export type Props = {
   text: string;
-  size: TextSize;
+  size: Size;
   extraStyle?: string;
 };
 
-const SIZE_LIST = new Map<TextSize, SizeClassName>([
+const SIZE_LIST = new Map<Size, SizeClassName>([
   ["small", "text-base"],
   ["normal", "text-xl"],
   ["medium", "text-4xl"],
