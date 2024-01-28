@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { INTRODUCE_MESSAGE, INTRODUCE_TABLE } from "../constants";
 import Text from "../elements/Text";
 import ContentLanguage from "../store";
@@ -10,7 +10,8 @@ import { Element } from "react-scroll";
 const Introduce = () => {
   const { language } = useContext(ContentLanguage);
   return (
-    <Element name="about">
+    <Fragment>
+      <Element name="about" className="h-20" />
       <div className="my-10 h-[80vh] flex px-14">
         <div className="flex-1 flex flex-col justify-center px-8">
           <Text text={INTRODUCE_MESSAGE["title"][language]} size="medium" />
@@ -67,7 +68,7 @@ const Introduce = () => {
           <div className="rounded-xl overflow-hidden bg-introduce bg-center bg-cover bg-no-repeat w-[70%] h-[80%] border mt-10" />
         </div>
       </div>
-    </Element>
+    </Fragment>
   );
 };
 
