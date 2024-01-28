@@ -9,6 +9,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import RoundedButton from "../elements/button/RoundedButton";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Marker from "../elements/Marker";
+import IconLinks from "./IconLinks";
 
 const TEXT_POSITION: LanguagesList = {
   EN: "left-[calc(38%-10px)] bottom-[calc(-27%+5px)]",
@@ -33,12 +34,7 @@ const TopArea = () => {
             <Marker position={TEXT_POSITION[language]} size="normal" />
           </div>
           <Text text={TOP_MESSAGE["third"][language]} size="medium" />
-          <Link
-            href="https://github.com/AubreyLin0"
-            sx={{ color: "black", margin: "20px 0" }}
-          >
-            <FontAwesomeIcon icon={faGithub} size="xl" />
-          </Link>
+          <IconLinks margin="10px 0" />
           <RoundedButton
             onClick={() => {}}
             icon={<FontAwesomeIcon icon={faArrowRight} className="ml-2" />}

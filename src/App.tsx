@@ -1,4 +1,5 @@
 import ContactForm from "./componets/ContactForm";
+import Footer from "./componets/Footer";
 import Introduce from "./componets/Introduce";
 import Navbar from "./componets/Navbar";
 import Portfolio from "./componets/Portfolio";
@@ -19,6 +20,7 @@ function App() {
         <Portfolio />
         <ContactForm />
       </main>
+      <Footer />
     </ContentLanguage.Provider>
   );
 }
