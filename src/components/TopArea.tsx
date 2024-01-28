@@ -10,6 +10,7 @@ import RoundedButton from "../elements/button/RoundedButton";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Marker from "../elements/Marker";
 import IconLinks from "./IconLinks";
+import { animateScroll } from "react-scroll";
 
 const TEXT_POSITION: LanguagesList = {
   EN: "left-[calc(38%-10px)] bottom-[calc(-27%+5px)]",
@@ -19,6 +20,10 @@ const TEXT_POSITION: LanguagesList = {
 
 const TopArea = () => {
   const { language } = useContext(ContentLanguage);
+
+  const scrollTo = () => {
+    animateScroll.scrollTo(2950);
+  };
   return (
     <Fragment>
       <div className="bg-base-white flex items-center px-24 pb-36 pt-40">
@@ -36,7 +41,7 @@ const TopArea = () => {
           <Text text={TOP_MESSAGE["third"][language]} size="medium" />
           <IconLinks margin="10px 0" />
           <RoundedButton
-            onClick={() => {}}
+            onClick={scrollTo}
             icon={<FontAwesomeIcon icon={faArrowRight} className="ml-2" />}
             text="Get In Touch"
             showAnimation
