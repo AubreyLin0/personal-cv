@@ -17,8 +17,8 @@ export default {
         "error-red": "#D42E20",
       },
       backgroundImage: {
-        wave: "url('./public/assets/wave-bg.svg')",
-        introduce: "url('./public/assets/introduce-image.jpg')",
+        wave: "url('wave-bg.svg')",
+        introduce: "url('introduce-image.jpg')",
       },
     },
   },
