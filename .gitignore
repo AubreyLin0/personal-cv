@@ -16,3 +16,5 @@ src/assets/introduce-image.jpg
 .DS_Store
 
 .env.local
+
+/dist
