@@ -21,7 +21,7 @@ const TopArea = () => {
   const { language } = useContext(ContentLanguage);
   return (
     <Fragment>
-      <div className="bg-base-white flex items-center px-24 py-28">
+      <div className="bg-base-white flex items-center px-24 pb-36 pt-40">
         <img
           src="src/assets/top-image.svg"
           alt="top-image"

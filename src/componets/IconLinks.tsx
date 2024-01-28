@@ -12,12 +12,16 @@ const IconLinks = ({ margin }: Props) => {
       <Link
         href="https://github.com/AubreyLin0"
         sx={{ color: "black", margin }}
+        target="_blank"
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faGithub} size="xl" />
       </Link>
       <Link
         href="https://www.linkedin.com/in/yi-hsuan-lin-142585226"
         sx={{ color: "black", margin }}
+        target="_blank"
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faLinkedin} size="xl" />
       </Link>

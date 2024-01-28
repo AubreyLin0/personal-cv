@@ -2,8 +2,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SectionHeading from "./SectionHeading";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 import SlideContent from "../elements/SlideContent";
+import { IconButton } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const BREAKPOINTS = {
   // when window width is >= 320px
@@ -31,10 +37,14 @@ const Portfolio = () => {
         spaceBetween={30}
         slidesPerGroup={3}
         pagination={false}
-        navigation
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          navigationDisabledClass: "swiper-navigation-disabled",
+        }}
         modules={[Pagination, Navigation]}
         breakpoints={BREAKPOINTS}
-        className="w-[80vw] mt-10"
+        className="w-[80vw] mt-10 relative"
       >
         <SwiperSlide>
           <SlideContent
@@ -74,6 +84,12 @@ const Portfolio = () => {
             text="Digital Clock"
           />
         </SwiperSlide>
+        <button className="swiper-button-next swiper-navigation-disabled absolute right-[1%] bottom-[50%] z-10 px-3 py-1 rounded-full bg-[#a3a7a87f] hover:bg-[#7c82847f] transition ease-in-out">
+          <FontAwesomeIcon icon={faChevronRight} size="2xl" />
+        </button>
+        <button className="swiper-button-prev swiper-navigation-disabled absolute bottom-[46%] z-10 px-3 py-1 rounded-full bg-[#a3a7a87f] hover:bg-[#7c82847f] transition ease-in-out">
+          <FontAwesomeIcon icon={faChevronLeft} size="2xl" />
+        </button>
       </Swiper>
     </div>
   );

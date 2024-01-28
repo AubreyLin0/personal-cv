@@ -1,3 +1,5 @@
+import Link from "@mui/material/Link";
+
 type Props = {
   endpoint: string;
   imgPath: string;
@@ -6,14 +8,16 @@ type Props = {
 
 const SlideContent = ({ endpoint, imgPath, text }: Props) => {
   return (
-    <a
+    <Link
       href={`https://aubreylin0.github.io/${endpoint}/`}
       target="_blank"
       rel="noreferrer"
+      underline="none"
+      sx={{ color: "black" }}
     >
       <img src={`src/assets/${imgPath}`} alt={imgPath} />
       <h3 className="text-center mt-3 font-semibold">{text}</h3>
-    </a>
+    </Link>
   );
 };
 

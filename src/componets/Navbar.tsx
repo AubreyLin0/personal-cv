@@ -31,7 +31,7 @@ const Navbar = () => {
     });
   };
   return (
-    <nav className="px-5 py-3 flex justify-between bg-base-white">
+    <nav className="px-5 py-3 bg-base-white fixed flex justify-between w-full z-10">
       <button
         className="text-dark-blue font-mercado font-extrabold text-5xl"
         onClick={scrollToTop}
