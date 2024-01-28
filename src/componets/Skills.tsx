@@ -10,8 +10,8 @@ import Tooltip from "@mui/material/Tooltip";
 const Skills = () => {
   const { language } = useContext(ContentLanguage);
   return (
-    <div className="py-32 flex flex-col items-center gap-3 border">
-      <SectionHeading heading="Skills" />
+    <div className="py-32 flex flex-col items-center gap-3">
+      <SectionHeading heading="Skills" position="bottom-[calc(-20%+5px)]" />
       <Text size="small" text={SKILL_SUBTITLE[language]} />
       <ul className="grid grid-cols-6 gap-x-3 gap-y-10 place-items-center w-[40vw] mt-10">
         <li className="col-span-2">

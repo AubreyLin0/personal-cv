@@ -1,5 +1,6 @@
 import Introduce from "./componets/Introduce";
 import Navbar from "./componets/Navbar";
+import Portfolio from "./componets/Portfolio";
 import Skills from "./componets/Skills";
 import TopArea from "./componets/TopArea";
 import { useChangeLanguage } from "./hooks/useChangeLanguage";
@@ -14,6 +15,7 @@ function App() {
         <TopArea />
         <Introduce />
         <Skills />
+        <Portfolio />
       </main>
     </ContentLanguage.Provider>
   );

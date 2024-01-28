@@ -8,7 +8,7 @@ type Props = {
 };
 
 const MARKER_SIZE = new Map<PickedSize, string>([
-  ["small", "w-20"],
+  ["small", "w-24"],
   ["normal", "w-32"],
 ]);
 

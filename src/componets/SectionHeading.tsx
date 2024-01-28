@@ -3,13 +3,14 @@ import Text from "../elements/Text";
 
 type Props = {
   heading: string;
+  position: string;
 };
 
-const SectionHeading = ({ heading }: Props) => {
+const SectionHeading = ({ heading, position }: Props) => {
   return (
     <div className="relative">
       <Text text={heading} size="medium" extraStyle="font-semibold" />
-      <Marker position="bottom-[calc(-20%+5px)]" size="small" />
+      <Marker position={position} size="small" />
     </div>
   );
 };
