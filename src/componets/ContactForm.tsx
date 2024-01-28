@@ -1,9 +1,14 @@
 import { useForm } from "react-hook-form";
 import SectionHeading from "./SectionHeading";
-import { ContactFormValue } from "../types";
+import { AlertProps, ContactFormValue } from "../types";
 import Input from "../elements/Input";
-import { CONTACT_TEXT, ERROR_MESSAGES, FORM_LABELS } from "../constants";
-import { Fragment, useContext } from "react";
+import {
+  ALERT_MESSAGES,
+  CONTACT_TEXT,
+  ERROR_MESSAGES,
+  FORM_LABELS,
+} from "../constants";
+import { Fragment, useContext, useState } from "react";
 import ContentLanguage from "../store";
 import RoundedButton from "../elements/button/RoundedButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,13 +18,26 @@ import TextArea from "../elements/Input/TextArea";
 import ErrorMessage from "../elements/ErrorMessage";
 import { emailRegEx } from "../constants/regex";
 import { Element } from "react-scroll";
+import emailjs from "@emailjs/browser";
+import Snackbar from "../elements/Snackbar";
+
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const USER_ID = import.meta.env.VITE_USER_ID;
 
 const ContactForm = () => {
+  const [alertProps, setAlertProps] = useState<AlertProps>({
+    isOpen: false,
+    type: undefined,
+    message: "",
+  });
   const { language } = useContext(ContentLanguage);
+  const { isOpen, type, message } = alertProps;
   const {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm<ContactFormValue>({
     defaultValues: {
       name: "",
@@ -29,8 +47,27 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: ContactFormValue) => {
-    console.log(errors.name);
+  const onSubmit = async (data: ContactFormValue) => {
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, USER_ID);
+      setAlertProps({
+        isOpen: true,
+        type: "success",
+        message: ALERT_MESSAGES["success"][language],
+      });
+      reset();
+    } catch (err) {
+      console.log(err);
+      setAlertProps({
+        isOpen: true,
+        type: "error",
+        message: ALERT_MESSAGES["error"][language],
+      });
+    }
+  };
+
+  const handleClose = () => {
+    setAlertProps((prev) => ({ ...prev, isOpen: false }));
   };
 
   return (
@@ -103,6 +140,12 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+      <Snackbar
+        isOpen={isOpen}
+        type={type}
+        message={message}
+        handleClose={handleClose}
+      />
     </Fragment>
   );
 };

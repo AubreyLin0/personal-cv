@@ -4,6 +4,8 @@ export type Languages = "EN" | "JA" | "TW";
 
 export type Size = "small" | "normal" | "medium" | "large";
 
+export type AlertType = "success" | "error" | undefined;
+
 export type LanguagesList = {
   [key in Languages]: string;
 };
@@ -29,3 +31,5 @@ export type InputProps<T extends FieldValues> = {
   rules?: RegisterOptions<T, Path<T>>;
   isRequired?: boolean;
 };
+
+export type AlertProps = { isOpen: boolean; type: AlertType; message: string };

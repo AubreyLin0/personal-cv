@@ -160,3 +160,16 @@ export const CONTACT_TEXT: NestedLanguagesList = {
     TW: `如果對我的作品有興趣，或者有其他疑問的話，歡迎寄信給我。\n收到信後我會盡快回覆您，謝謝。`,
   },
 };
+
+export const ALERT_MESSAGES: NestedLanguagesList = {
+  success: {
+    EN: "Send successfully",
+    JA: "送信完了しました",
+    TW: "送信成功",
+  },
+  error: {
+    EN: "Delivery failed. Please contact me by other method.",
+    JA: "送信失敗しました。申し訳ございませんが、他の連絡方法でご連絡ください。",
+    TW: "送信失敗。麻煩請用其他聯絡方式聯絡我。",
+  },
+};
