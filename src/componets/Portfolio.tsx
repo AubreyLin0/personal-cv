@@ -2,14 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SectionHeading from "./SectionHeading";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-// import "swiper/css/navigation";
 import SlideContent from "../elements/SlideContent";
-import { IconButton } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { Element } from "react-scroll";
 
 const BREAKPOINTS = {
   // when window width is >= 320px
@@ -24,6 +23,9 @@ const BREAKPOINTS = {
     slidesPerView: 2,
   },
 } as const;
+
+const ArrowButtonStyle =
+  "z-10 px-3 py-1 rounded-full bg-[#a3a7a87f] hover:bg-[#7c82847f] transition ease-in-out swiper-navigation-disabled absolute ";
 
 const Portfolio = () => {
   return (
@@ -84,10 +86,14 @@ const Portfolio = () => {
             text="Digital Clock"
           />
         </SwiperSlide>
-        <button className="swiper-button-next swiper-navigation-disabled absolute right-[1%] bottom-[50%] z-10 px-3 py-1 rounded-full bg-[#a3a7a87f] hover:bg-[#7c82847f] transition ease-in-out">
+        <button
+          className={`swiper-button-next right-[1%] bottom-[50%] ${ArrowButtonStyle}`}
+        >
           <FontAwesomeIcon icon={faChevronRight} size="2xl" />
         </button>
-        <button className="swiper-button-prev swiper-navigation-disabled absolute bottom-[46%] z-10 px-3 py-1 rounded-full bg-[#a3a7a87f] hover:bg-[#7c82847f] transition ease-in-out">
+        <button
+          className={`swiper-button-prev bottom-[46%] ${ArrowButtonStyle}`}
+        >
           <FontAwesomeIcon icon={faChevronLeft} size="2xl" />
         </button>
       </Swiper>

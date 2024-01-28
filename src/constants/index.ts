@@ -1,27 +1,27 @@
 import { LanguagesList, NestedLanguagesList } from "../types";
 
-export const LINKS: LanguagesList[] = [
-  {
+export const LINKS: NestedLanguagesList = {
+  about: {
     EN: "About",
     JA: "自己紹介",
     TW: "關於我",
   },
-  {
+  skills: {
     EN: "Skills",
     JA: "スキル",
     TW: "技能",
   },
-  {
+  portfolio: {
     EN: "Portfolio",
     JA: "ポートフォリオ",
     TW: "作品集",
   },
-  {
+  contact: {
     EN: "Contact",
     JA: "連絡先",
     TW: "聯絡我",
   },
-];
+};
 
 export const MENU_TITLE: LanguagesList = {
   EN: "Language",

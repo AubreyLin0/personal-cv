@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import Marker from "../elements/Marker";
 import Text from "../elements/Text";
 
@@ -8,10 +9,10 @@ type Props = {
 
 const SectionHeading = ({ heading, position }: Props) => {
   return (
-    <div className="relative">
+    <Element className="relative" name={heading.toLowerCase()}>
       <Text text={heading} size="medium" extraStyle="font-semibold" />
       <Marker position={position} size="small" />
-    </div>
+    </Element>
   );
 };
 

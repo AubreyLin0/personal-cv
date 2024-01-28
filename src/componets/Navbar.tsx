@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons/faCaretDown";
 import ContentLanguage from "../store";
 import { Languages } from "../types";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState<null | Element>(null);
@@ -39,14 +40,13 @@ const Navbar = () => {
         Resume
       </button>
       <List sx={{ display: "flex" }}>
-        {LINKS.map((link, index) => {
+        {Object.entries(LINKS).map(([sectionKey, textValue]) => {
           return (
-            <ListItemButton
-              key={index}
-              sx={{ borderRadius: "5px", margin: "0 8px" }}
-            >
-              {link[language]}
-            </ListItemButton>
+            <Link to={sectionKey} smooth duration={500} key={sectionKey}>
+              <ListItemButton sx={{ borderRadius: "5px", margin: "0 8px" }}>
+                {textValue[language]}
+              </ListItemButton>
+            </Link>
           );
         })}
         <ListItemButton
