@@ -15,7 +15,7 @@ const MARKER_SIZE = new Map<PickedSize, string>([
 const Marker = ({ position, size }: Props) => {
   return (
     <img
-      src="src/assets/marker.svg"
+      src="./assets/marker.svg"
       alt="marker"
       className={`absolute ${position} ${MARKER_SIZE.get(size) ?? ""}`}
     />

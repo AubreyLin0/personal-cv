@@ -25,11 +25,7 @@ const TopArea = () => {
   return (
     <Fragment>
       <div className="bg-base-white flex items-center px-24 pb-36 pt-40">
-        <img
-          src="/src/assets/top-image.svg"
-          alt="top-image"
-          className="flex-1"
-        />
+        <img src="./assets/top-image.svg" alt="top-image" className="flex-1" />
         <div className="flex-1 flex flex-col justify-center pl-10 gap-2">
           <Text text={TOP_MESSAGE["first"][language]} size="medium" />
           <div className="relative">

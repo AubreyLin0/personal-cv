@@ -15,7 +15,7 @@ const SlideContent = ({ endpoint, imgPath, text }: Props) => {
       underline="none"
       sx={{ color: "black" }}
     >
-      <img src={`src/assets/${imgPath}`} alt={imgPath} />
+      <img src={`./assets/${imgPath}`} alt={imgPath} />
       <h3 className="text-center mt-3 font-semibold">{text}</h3>
     </Link>
   );

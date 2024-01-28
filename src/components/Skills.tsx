@@ -34,12 +34,7 @@ const Skills = () => {
           </li>
           <li className="col-span-2">
             <Tooltip title="Vite" placement="top" arrow>
-              <img
-                width="95"
-                height="95"
-                src="src/assets/vite.svg"
-                alt="vite"
-              />
+              <img width="95" height="95" src="./assets/vite.svg" alt="vite" />
             </Tooltip>
           </li>
           <li className="col-[2_/_span_2]">
