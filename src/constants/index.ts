@@ -142,19 +142,9 @@ export const ERROR_MESSAGES: NestedLanguagesList = {
     TW: "必須欄位",
   },
   email: {
-    EN: "Email",
-    JA: "メールアドレス",
-    TW: "Email",
-  },
-  title: {
-    EN: "Title",
-    JA: "件名",
-    TW: "標題",
-  },
-  content: {
-    EN: "Message",
-    JA: "本文",
-    TW: "內文",
+    EN: "Please provide the correct email address.",
+    JA: "正しいメールアドレスを入力してください",
+    TW: "請輸入正確的電子郵箱地址",
   },
 };
 

@@ -5,14 +5,19 @@ import ContentLanguage from "../../store";
 import { ERROR_MESSAGES } from "../../constants";
 import { InputProps } from "../../types";
 
-const Input = <T extends FieldValues>({
+type Props<T extends FieldValues> = {
+  rows: number;
+} & InputProps<T>;
+
+const TextArea = <T extends FieldValues>({
   control,
   name,
   label,
+  rows,
   isValid,
   rules = undefined,
   isRequired = true,
-}: InputProps<T>) => {
+}: Props<T>) => {
   const { language } = useContext(ContentLanguage);
   return (
     <Controller
@@ -30,13 +35,15 @@ const Input = <T extends FieldValues>({
           {...field}
           label={label}
           size="small"
-          fullWidth
           autoComplete="off"
+          fullWidth
+          multiline
           error={isValid}
+          rows={rows}
         />
       )}
     />
   );
 };
 
-export default Input;
+export default TextArea;

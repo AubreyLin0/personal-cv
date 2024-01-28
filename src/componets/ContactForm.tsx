@@ -2,17 +2,24 @@ import { useForm } from "react-hook-form";
 import SectionHeading from "./SectionHeading";
 import { ContactFormValue } from "../types";
 import Input from "../elements/Input";
-import { CONTACT_TEXT, FORM_LABELS } from "../constants";
+import { CONTACT_TEXT, ERROR_MESSAGES, FORM_LABELS } from "../constants";
 import { useContext } from "react";
 import ContentLanguage from "../store";
 import RoundedButton from "../elements/button/RoundedButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons/faPaperPlane";
 import Text from "../elements/Text";
+import TextArea from "../elements/Input/TextArea";
+import ErrorMessage from "../elements/ErrorMessage";
+import { emailRegEx } from "../constants/regex";
 
 const ContactForm = () => {
   const { language } = useContext(ContentLanguage);
-  const { handleSubmit, control } = useForm<ContactFormValue>({
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<ContactFormValue>({
     defaultValues: {
       name: "",
       email: "",
@@ -21,7 +28,10 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = ({ data }: ContactFormValue) => {};
+  const onSubmit = (data: ContactFormValue) => {
+    console.log(errors.name);
+  };
+
   return (
     <div className="py-10 flex flex-col items-center gap-5">
       <SectionHeading
@@ -32,32 +42,43 @@ const ContactForm = () => {
         <div className="flex-1">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className=" bg-base-white w-[30vw] flex flex-col items-center rounded-xl gap-8 py-10 px-10 ml-auto"
+            className=" bg-base-white w-[30vw] flex flex-col items-center rounded-xl p-10 ml-auto"
           >
             <Input<ContactFormValue>
               control={control}
               name="name"
+              isValid={Boolean(errors.name)}
               label={FORM_LABELS["name"][language]}
-              rules={{}}
             />
+            <ErrorMessage<ContactFormValue> errors={errors} name="name" />
             <Input<ContactFormValue>
               control={control}
               name="email"
               label={FORM_LABELS["email"][language]}
-              rules={{}}
+              isValid={Boolean(errors.email)}
+              rules={{
+                pattern: {
+                  value: emailRegEx,
+                  message: ERROR_MESSAGES["email"][language],
+                },
+              }}
             />
+            <ErrorMessage<ContactFormValue> errors={errors} name="email" />
             <Input<ContactFormValue>
               control={control}
               name="title"
+              isValid={Boolean(errors.title)}
               label={FORM_LABELS["title"][language]}
-              rules={{}}
             />
-            <Input<ContactFormValue>
+            <ErrorMessage<ContactFormValue> errors={errors} name="title" />
+            <TextArea<ContactFormValue>
               control={control}
               name="content"
+              isValid={Boolean(errors.content)}
               label={FORM_LABELS["content"][language]}
-              rules={{}}
+              rows={5}
             />
+            <ErrorMessage<ContactFormValue> errors={errors} name="content" />
             <RoundedButton
               text="SEND"
               type="submit"

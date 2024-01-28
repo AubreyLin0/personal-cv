@@ -1,3 +1,5 @@
+import { Control, FieldValues, Path, RegisterOptions } from "react-hook-form";
+
 export type Languages = "EN" | "JA" | "TW";
 
 export type Size = "small" | "normal" | "medium" | "large";
@@ -17,4 +19,13 @@ export type ContactFormValue = {
   email: string;
   title: string;
   content: string;
+};
+
+export type InputProps<T extends FieldValues> = {
+  control: Control<T>;
+  name: Path<T>;
+  label: string;
+  isValid: boolean;
+  rules?: RegisterOptions<T, Path<T>>;
+  isRequired?: boolean;
 };
