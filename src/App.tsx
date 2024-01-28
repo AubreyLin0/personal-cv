@@ -1,10 +1,10 @@
-import ContactForm from "./componets/ContactForm";
-import Footer from "./componets/Footer";
-import Introduce from "./componets/Introduce";
-import Navbar from "./componets/Navbar";
-import Portfolio from "./componets/Portfolio";
-import Skills from "./componets/Skills";
-import TopArea from "./componets/TopArea";
+import ContactArea from "./components/ContactArea";
+import Footer from "./components/Footer";
+import Introduce from "./components/Introduce";
+import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
+import TopArea from "./components/TopArea";
 import { useChangeLanguage } from "./hooks/useChangeLanguage";
 import ContentLanguage from "./store";
 
@@ -18,7 +18,7 @@ function App() {
         <Introduce />
         <Skills />
         <Portfolio />
-        <ContactForm />
+        <ContactArea />
       </main>
       <Footer />
     </ContentLanguage.Provider>
