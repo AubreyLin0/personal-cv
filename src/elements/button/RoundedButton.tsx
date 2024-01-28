@@ -1,3 +1,4 @@
+import CircularProgress from "@mui/material/CircularProgress";
 import { MouseEventHandler, ReactNode } from "react";
 
 type Props = {
@@ -5,7 +6,8 @@ type Props = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit";
   icon?: ReactNode;
-  showAnimation?: Boolean;
+  showAnimation?: boolean;
+  isLoading?: boolean;
 };
 
 const RoundedButton = ({
@@ -14,18 +16,30 @@ const RoundedButton = ({
   type = "button",
   icon = null,
   showAnimation = false,
+  isLoading = false,
 }: Props) => {
   const animation = showAnimation
     ? "duration-300 hover:translate-x-[14px]"
     : "";
+  const backgroundColor = isLoading
+    ? "bg-gray-400"
+    : "bg-base-yellow hover:bg-dark-yellow";
+
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`bg-base-yellow font-semibold text-dark-blue rounded-full py-3 w-52 text-xl transition ease-in-out hover:bg-dark-yellow ${animation}`}
+      className={`flex items-center justify-center font-semibold text-dark-blue rounded-full py-3 w-52 text-xl transition ease-in-out ${animation} ${backgroundColor}`}
+      disabled={isLoading}
     >
-      {text}
-      {icon}
+      {isLoading ? (
+        <CircularProgress size={28} sx={{ color: "white" }} />
+      ) : (
+        <>
+          {text}
+          {icon}
+        </>
+      )}
     </button>
   );
 };
